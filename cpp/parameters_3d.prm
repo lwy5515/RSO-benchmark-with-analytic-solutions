@@ -1,0 +1,22 @@
+# Three-dimensional n=2 polynomial bump, evaluated by the direct sinc scheme.
+# These quadrature settings match the paper's double-precision FEM loads.
+# The tail target is 1e-12, not a bound for the total evaluation error.
+subsection Evaluation
+  set Dimension = 3
+  set Fractional exponent = 0.5
+  set Kappa = 1
+  set Radii = 0, 0.5, 1, 1.5, 2
+  set Method = direct
+  set Working precision bits = 53
+end
+
+subsection Quadrature
+  set Sinc spacing = 0.30
+  set Gaussian order = 28
+  set Sinc truncation = tail tolerance
+  set Tail tolerance = 1e-12
+end
+
+subsection Output
+  set Print timing summary = true
+end

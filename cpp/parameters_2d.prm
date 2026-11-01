@@ -1,0 +1,21 @@
+# Two-dimensional n=2 polynomial bump, kappa=1.
+# Both direct and split schemes are available at 53/160/224/256 bits.
+subsection Evaluation
+  set Dimension = 2
+  set Fractional exponent = 0.5
+  set Kappa = 1
+  set Radii = 0, 0.5, 1, 1.5, 2
+  set Method = split
+  set Working precision bits = 160
+end
+
+subsection Quadrature
+  set Sinc spacing = 0.20
+  set Gaussian order = 48
+  set Sinc truncation = balanced
+  set Tail tolerance = 1e-12
+end
+
+subsection Output
+  set Print timing summary = true
+end
